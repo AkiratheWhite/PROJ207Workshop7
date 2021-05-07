@@ -38,4 +38,16 @@ public class JPA {
     public static Object GetOne(Class<?> entityName, Object primaryKey) {
         return em.find(entityName, primaryKey);
     }
+
+    public static boolean AddOne(Object newEntity) {
+        try {
+            em.getTransaction().begin();
+            em.persist(newEntity);
+            em.getTransaction().commit();
+            return true;
+        } catch (Exception err) {
+            System.out.println("Database error: " + err.getMessage());
+        }
+        return false;
+    }
 }

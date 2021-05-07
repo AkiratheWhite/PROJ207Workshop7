@@ -12,8 +12,11 @@
 </head>
 <body>
     <h1>This is the Travel Experts Web API</h1>
+
     <h2>How to use</h2>
-    <p>To access a resource, use the following URI template: http://localhost:8080/Workshop_7_war_exploded/api/{resource}</p>
-    <p>If you do not specify a resource path, the default test resource will send a plain-text response back.</p>
+        <p>To access a resource, use the following URI template: http://localhost:8080/Workshop_7_war_exploded/api/{resource}</p>
+        <p>If you do not specify a resource path, the default test resource will send a plain-text response back.</p>
+    <h2>Agents</h2>
+        <p>To add a new agent, use the form under http://localhost:8080/Workshop_7_war_exploded/agent/AddAgent</p>
 </body>
 </html>
