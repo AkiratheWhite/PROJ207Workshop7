@@ -8,8 +8,16 @@
         <jsp-file>/agent.jsp</jsp-file>
     </servlet>
 
+    <servlet>
+        <servlet-name>Travel Packages</servlet-name>
+        <jsp-file>/package.jsp</jsp-file>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Agent</servlet-name>
         <url-pattern>/agent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Travel Packages</servlet-name>
+        <url-pattern>/travel-packages</url-pattern>
     </servlet-mapping>
 </web-app>
