@@ -12,7 +12,7 @@ public class Agent {
     @Id @Column(name="AgentId")
     private Integer AgentId;
 
-    @Column(name="AgtFirstName ")
+    @Column(name="AgtFirstName")
     private String AgtFirstName;
 
     @Column(name="AgtMiddleInitial")
