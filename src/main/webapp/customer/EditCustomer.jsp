@@ -56,7 +56,7 @@
 
         $.ajax({
             type: "PUT",
-            url: "http://localhost:8080/Workshop_7_war_exploded/api/customer/" + customerId.toString(),
+            url: "http://localhost:8080/Workshop_7_war_exploded/api/customer/"+customerId.toString(),
             data: formJSON,
             dataType: "text",
             contentType: "application/json",

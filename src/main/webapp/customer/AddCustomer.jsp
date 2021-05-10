@@ -12,15 +12,16 @@
     <%@include file="../partials/bootsrap_jquery.jsp"%>
 </head>
 <body>
-    <div class="container py-4">
-        <h2 class="text-center">Add New Customer</h2>
-        <%@include file="components/CustomerForm.jsp"%>
-        <div class="d-flex justify-content-center">
-            <a href="${pageContext.request.contextPath}/customer/">
-                <button class="btn btn-secondary">Back to list</button>
-            </a>
-        </div>
+
+<div class="container py-4">
+    <h2 class="text-center">Add New Customer</h2>
+    <%@include file="components/CustomerForm.jsp"%>
+    <div class="d-flex justify-content-center">
+        <a href="${pageContext.request.contextPath}/customer/">
+            <button class="btn btn-secondary">Back to list</button>
+        </a>
     </div>
+</div>
 
 <script>
     function HandleSubmit(event){

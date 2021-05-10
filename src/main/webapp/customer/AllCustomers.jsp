@@ -22,7 +22,7 @@
         </div>
 
         <table  id="CustomerTable" class="table text-center">
-            <thread class="table-dark">
+            <thead class="table-dark">
                 <tr>
                     <th scope="col">Customer ID</th>
                     <th scope="col">First Name</th>
@@ -37,7 +37,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Agent ID</th>
                 </tr>
-            </thread>
+            </thead>
             <tbody>
             </tbody>
         </table>
