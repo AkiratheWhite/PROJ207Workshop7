@@ -15,6 +15,18 @@
         <servlet-name>EditAgent</servlet-name>
         <jsp-file>/agent/EditAgent.jsp</jsp-file>
     </servlet>
+    <servlet>
+        <servlet-name>Booking</servlet-name>
+        <jsp-file>/bookingdetails/AllBookings.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>AddBooking</servlet-name>
+        <jsp-file>/bookingdetails/AddBookings.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>EditBooking</servlet-name>
+        <jsp-file>/bookingdetails/EditBookings.jsp</jsp-file>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>Agent</servlet-name>
@@ -27,5 +39,17 @@
     <servlet-mapping>
         <servlet-name>EditAgent</servlet-name>
         <url-pattern>/agent/EditAgent/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Booking</servlet-name>
+        <url-pattern>/bookingdetails/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddBooking</servlet-name>
+        <url-pattern>/bookingdetails/AddBooking</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditBooking</servlet-name>
+        <url-pattern>/bookingdetails/EditBooking/*</url-pattern>
     </servlet-mapping>
 </web-app>
