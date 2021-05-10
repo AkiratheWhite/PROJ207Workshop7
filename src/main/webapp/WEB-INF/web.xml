@@ -6,7 +6,15 @@
     <!-- Servlets -->
     <servlet>
         <servlet-name>Agent</servlet-name>
-        <jsp-file>/agent.jsp</jsp-file>
+        <jsp-file>/agent/AllAgents.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>AddAgent</servlet-name>
+        <jsp-file>/agent/AddAgent.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>EditAgent</servlet-name>
+        <jsp-file>/agent/EditAgent.jsp</jsp-file>
     </servlet>
 
     <servlet>
@@ -17,7 +25,15 @@
     <!-- Servlet Mapping -->
     <servlet-mapping>
         <servlet-name>Agent</servlet-name>
-        <url-pattern>/agent</url-pattern>
+        <url-pattern>/agent/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddAgent</servlet-name>
+        <url-pattern>/agent/AddAgent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditAgent</servlet-name>
+        <url-pattern>/agent/EditAgent/*</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
