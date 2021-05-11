@@ -3,7 +3,7 @@ package com.data.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customers")
+@Table(name = "customers", schema = "travelexperts")
 public class Customer {
     private int CustomerId;
     private String CustFirstName;
@@ -139,7 +139,7 @@ public class Customer {
         AgentId = agentId;
     }
 
-    /*@Override
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -166,9 +166,9 @@ public class Customer {
         if (AgentId != null ? !AgentId.equals(customer.AgentId) : customer.AgentId != null) return false;
 
         return true;
-    }*/
+    }
 
-   /* @Override
+    @Override
     public int hashCode() {
         int result = CustomerId;
         result = 31 * result + (CustFirstName != null ? CustFirstName.hashCode() : 0);
@@ -183,9 +183,9 @@ public class Customer {
         result = 31 * result + (CustEmail != null ? CustEmail.hashCode() : 0);
         result = 31 * result + (AgentId != null ? AgentId.hashCode() : 0);
         return result;
-    }*/
+    }
 //----------------------------------------------------------------------------//
-    public Customer(){}
+    /*public Customer(){}
 
     public Customer(int customerId, String custFirstName, String custLastName, String custAddress, String custCity, String custProv, String custPostal, String custCountry, String custHomePhone, String custBusPhone, String custEmail, Integer agentId) {
         CustomerId = customerId;
@@ -208,5 +208,5 @@ public class Customer {
                 "CustFirstName='" + CustFirstName + '\'' +
                 ", CustLastName='" + CustLastName + '\'' +
                 '}';
-    }
+    }*/
 }

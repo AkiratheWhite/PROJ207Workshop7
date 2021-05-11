@@ -24,7 +24,7 @@
 </div>
 
 <script>
-    function HandleSubmit(event){
+    function HandleSubmitCustomer(event){
         event.preventDefault();
         $("#btnSubmit").attr("disabled", "");
         $("#btnSubmit").removeAttr("type");
