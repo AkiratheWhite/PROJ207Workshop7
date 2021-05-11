@@ -34,7 +34,7 @@
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/Workshop_7_war_exploded/api/booking/add-booking",
+            url: "http://localhost:8080/Workshop_7_war_exploded/api/booking",
             data: formJSON,
             dataType: "text",
             contentType: "application/json",

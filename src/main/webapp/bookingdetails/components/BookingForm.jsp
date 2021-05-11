@@ -9,8 +9,8 @@
 <form id="BookingDetailForm" onsubmit="HandleSubmitBookings(event)">
   <div class="d-flex flex-column col-12 col-md-6 m-auto">
     <input class="form-control" type="text" id="ItineraryNo" name="ItineraryNo" placeholder="Itinerary Number">
-    <input class="form-control" type="date" id="TripStart" name="TripStart" placeholder="Trip Start Date">
-    <input class="form-control" type="date" id="TripEnd" name="TripEnd" placeholder="Trip End Date">
+    <input class="form-control" type="text" id="TripStart" name="TripStart" placeholder="Trip Start Date">
+    <input class="form-control" type="text" id="TripEnd" name="TripEnd" placeholder="Trip End Date">
     <input class="form-control" type="text" id="Description" name="Description" placeholder="Description">
     <input class="form-control" type="text" id="Destination"  name="Destination" placeholder="Destination">
     <input class="form-control" type="text" id="BasePrice" name="BasePrice" placeholder="Base Price">

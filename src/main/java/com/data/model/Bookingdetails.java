@@ -152,5 +152,30 @@ public class Bookingdetails {
         ProductSupplierId = productSupplierId;
     }
 
+    public Bookingdetails(int bookingDetailId, Double itineraryNo, Timestamp tripStart, Timestamp tripEnd, String description, String destination, BigDecimal basePrice, BigDecimal agencyCommission, Integer bookingId, String regionId, String classId, String feeId, Integer productSupplierId) {
+        BookingDetailId = bookingDetailId;
+        ItineraryNo = itineraryNo;
+        TripStart = tripStart;
+        TripEnd = tripEnd;
+        Description = description;
+        Destination = destination;
+        BasePrice = basePrice;
+        AgencyCommission = agencyCommission;
+        BookingId = bookingId;
+        RegionId = regionId;
+        ClassId = classId;
+        FeeId = feeId;
+        ProductSupplierId = productSupplierId;
+    }
 
+    public Bookingdetails() {
+    }
+
+    @Override
+    public String toString() {
+        return "Bookingdetails{" +
+                "BookingDetailId=" + BookingDetailId +
+                ", Description='" + Description + '\'' +
+                '}';
+    }
 }

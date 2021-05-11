@@ -1,6 +1,7 @@
 package com.app.resources;
 
 import com.data.db.JPA;
+import com.data.model.Agent;
 import com.data.model.Bookingdetails;
 import com.google.gson.Gson;
 import org.jboss.resteasy.spi.HttpRequest;
@@ -37,12 +38,22 @@ public class BookingResource {
     }
 
     @POST
-    @Path("/add-booking")
+    @Path("")
     @Consumes("application/json")
     @Produces("text/plain")
     public Response AddBooking(String body) {
-        Bookingdetails newBooking = new Gson().fromJson(body, Bookingdetails.class);
-        newBooking.setBookingId(0); //Primary key must be manually entered. Using 0 to auto-increment.
+
+        Bookingdetails newBooking;
+        //Since only primary key is needed, you can technically send an empty string and create a new object.
+        //GSON will throw an error if it tries to convert an empty string to an Integer.
+        try {
+            newBooking = new Gson().fromJson(body, Bookingdetails.class);
+        } catch (Exception err) {
+            System.out.println("Error: " + err.getMessage());
+            newBooking = new Bookingdetails();
+        }
+
+        newBooking.setBookingDetailId(0); //Primary key must be manually entered. Using 0 to auto-increment.
 
         if (JPA.AddOne(newBooking)) {
             return Response.status(Response.Status.CREATED).entity("Request processed.").build();

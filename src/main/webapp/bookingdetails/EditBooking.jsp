@@ -34,7 +34,7 @@
         fetch("http://localhost:8080/Workshop_7_war_exploded/api/booking/"+BookingDetailID, {
             method: 'GET'
         }).then(response => response.json()).then(data => {
-            bookingdetailId = data['BookingDetailID'];
+            bookingdetailId = data['BookingDetailId'];
             const values = Object.keys(data);
             for(let i=0; i<values.length; i++) {
                 $("#"+values[i]).val(data[values[i]]);
@@ -42,13 +42,13 @@
         });
     });
 
-    function HandleSubmit(event) {
+    function HandleSubmitBookings(event) {
         event.preventDefault();
         $("#btnSubmit").attr("disabled", "");
         $("#btnSubmit").removeAttr("type");
 
         const formData = $("#BookingDetailForm").serializeArray();
-        formData.push({'name': 'BookingDetailID', 'value': bookingdetailId.toString()});
+        formData.push({'name': 'BookingDetailId', 'value': bookingdetailId.toString()});
 
         var formObject = {};
 
