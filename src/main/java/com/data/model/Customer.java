@@ -139,6 +139,52 @@ public class Customer {
         AgentId = agentId;
     }
 
+    /*@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Customer customer = (Customer) o;
+
+        if (CustomerId != customer.CustomerId) return false;
+        if (CustFirstName != null ? !CustFirstName.equals(customer.CustFirstName) : customer.CustFirstName != null)
+            return false;
+        if (CustLastName != null ? !CustLastName.equals(customer.CustLastName) : customer.CustLastName != null)
+            return false;
+        if (CustAddress != null ? !CustAddress.equals(customer.CustAddress) : customer.CustAddress != null)
+            return false;
+        if (CustCity != null ? !CustCity.equals(customer.CustCity) : customer.CustCity != null) return false;
+        if (CustProv != null ? !CustProv.equals(customer.CustProv) : customer.CustProv != null) return false;
+        if (CustPostal != null ? !CustPostal.equals(customer.CustPostal) : customer.CustPostal != null) return false;
+        if (CustCountry != null ? !CustCountry.equals(customer.CustCountry) : customer.CustCountry != null)
+            return false;
+        if (CustHomePhone != null ? !CustHomePhone.equals(customer.CustHomePhone) : customer.CustHomePhone != null)
+            return false;
+        if (CustBusPhone != null ? !CustBusPhone.equals(customer.CustBusPhone) : customer.CustBusPhone != null)
+            return false;
+        if (CustEmail != null ? !CustEmail.equals(customer.CustEmail) : customer.CustEmail != null) return false;
+        if (AgentId != null ? !AgentId.equals(customer.AgentId) : customer.AgentId != null) return false;
+
+        return true;
+    }*/
+
+   /* @Override
+    public int hashCode() {
+        int result = CustomerId;
+        result = 31 * result + (CustFirstName != null ? CustFirstName.hashCode() : 0);
+        result = 31 * result + (CustLastName != null ? CustLastName.hashCode() : 0);
+        result = 31 * result + (CustAddress != null ? CustAddress.hashCode() : 0);
+        result = 31 * result + (CustCity != null ? CustCity.hashCode() : 0);
+        result = 31 * result + (CustProv != null ? CustProv.hashCode() : 0);
+        result = 31 * result + (CustPostal != null ? CustPostal.hashCode() : 0);
+        result = 31 * result + (CustCountry != null ? CustCountry.hashCode() : 0);
+        result = 31 * result + (CustHomePhone != null ? CustHomePhone.hashCode() : 0);
+        result = 31 * result + (CustBusPhone != null ? CustBusPhone.hashCode() : 0);
+        result = 31 * result + (CustEmail != null ? CustEmail.hashCode() : 0);
+        result = 31 * result + (AgentId != null ? AgentId.hashCode() : 0);
+        return result;
+    }*/
+//----------------------------------------------------------------------------//
     public Customer(){}
 
     public Customer(int customerId, String custFirstName, String custLastName, String custAddress, String custCity, String custProv, String custPostal, String custCountry, String custHomePhone, String custBusPhone, String custEmail, Integer agentId) {

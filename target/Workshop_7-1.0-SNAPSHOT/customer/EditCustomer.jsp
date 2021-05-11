@@ -16,38 +16,44 @@
     <h2 class="text-center">Edit Customer</h2>
     <%@include file="./components/CustomerForm.jsp"%>
     <div class="d-flex justify-content-center">
-        <a href="${pageContext.request.contextPath}/customer">
+        <a href="${pageContext.request.contextPath}/customer/">
             <button class="btn btn-secondary">Back to List</button>
         </a>
     </div>
 </div>
 
 <script>
-    var customerId;
+    let customerId;
+
     $(document).ready(() => {
-        const url_string = window.location.href;
-        const position = url_string.lastIndexOf("/");
-        const CustomerID = url_string.substring(position+1, url_string.length);
+        const url_string = window.location.href
+        const position = url_string.lastIndexOf("/")
+        const CustomerID = url_string.substring(position+1, url_string.length)
+        //console.log("Customer ID: "+CustomerID);
 
         fetch("http://localhost:8080/Workshop_7_war_exploded/api/customer/"+CustomerID, {
             method: 'GET'
         }).then(response => response.json()).then(data => {
-            customerId = data['CustomerId'];
-            const values = Object.keys(data);
+            customerId = data['CustomerId']
+            const values = Object.keys(data)
             for(let i=0; i<values.length; i++) {
-                $("#"+values[i]).val(data[values[i]]);
+                //console.log("Values "+ values[i] + " - " +data[values[i]])
+                //console.log($("input[name="+values[i]+"]"));
+                //$("#"+values[i]).val(data[values[i]])
+                $("input[name="+values[i]+"]").val(data[values[i]])
             }
         });
     });
 
-    function HandleSubmit(event) {
+    //function HandleSubmit(event) {
+    function HandleSubmitCustomer(event) {
         event.preventDefault();
         $("#btnSubmit").attr("disabled", "");
         $("#btnSubmit").removeAttr("type");
         const formData = $("#CustomerForm").serializeArray();
         formData.push({'name': 'CustomerId', 'value': customerId.toString()});
 
-        var formObject = {};
+        let formObject = {};
 
         for (let i = 0; i < formData.length; i++){
             formObject[formData[i]['name']] = formData[i]['value'];
@@ -56,7 +62,7 @@
 
         $.ajax({
             type: "PUT",
-            url: "http://localhost:8080/Workshop_7_war_exploded/api/customer/" + customerId.toString(),
+            url: "http://localhost:8080/Workshop_7_war_exploded/api/customer/"+customerId.toString(),
             data: formJSON,
             dataType: "text",
             contentType: "application/json",

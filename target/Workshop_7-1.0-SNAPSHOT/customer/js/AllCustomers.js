@@ -40,7 +40,7 @@ const createCustomerList = () => {
             actionColumn.appendChild(btnDel);
             newRow.appendChild(actionColumn);
 
-            $("#CustomerTable tbody").append(newRow); //Adds the new row to the agent table.
+            $("#CustomerTable tbody").append(newRow); //Adds the new row to the customer table.
         }
 
         //Adds event listeners to all the delete buttons.
