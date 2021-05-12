@@ -31,8 +31,6 @@
             const values = Object.keys(data);
             for(let i=0; i<values.length; i++) {
                 $("#"+values[i]).val(data[values[i]]);
-                console.log("Values:" + values[i])
-                console.log("Data:" + data[values[i]])
             }
         });
     });

@@ -87,13 +87,13 @@ function EditTravelPackage() {
             let dateValue = new Date(formData[index]["value"]);
 
             // Print unformatted dateValue
-            console.log("[UNFORMATTED]: " + dateValue)
+            //console.log("[UNFORMATTED]: " + dateValue)
 
             // Convert dateValue to ISOString
             dateValue = (dateValue.toISOString());
 
             // Print
-            console.log("[FORMATTED]: " + dateValue)
+            //console.log("[FORMATTED]: " + dateValue)
 
             // Put Value in the Object
             formObject[formData[index]["name"]] = dateValue;
