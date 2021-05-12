@@ -3,6 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!-- Servlets -->
+      <!-- Agent -->
     <servlet>
         <servlet-name>Agent</servlet-name>
         <jsp-file>/agent/AllAgents.jsp</jsp-file>
@@ -15,6 +17,8 @@
         <servlet-name>EditAgent</servlet-name>
         <jsp-file>/agent/EditAgent.jsp</jsp-file>
     </servlet>
+  
+      <!-- Booking -->
     <servlet>
         <servlet-name>Booking</servlet-name>
         <jsp-file>/bookingdetails/AllBookings.jsp</jsp-file>
@@ -28,31 +32,23 @@
         <jsp-file>/bookingdetails/EditBooking.jsp</jsp-file>
     </servlet>
 
-    <servlet-mapping>
-        <servlet-name>Agent</servlet-name>
-        <url-pattern>/agent/</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AddAgent</servlet-name>
-        <url-pattern>/agent/AddAgent</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>EditAgent</servlet-name>
-        <url-pattern>/agent/EditAgent/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Booking</servlet-name>
-        <url-pattern>/bookingdetails/</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AddBooking</servlet-name>
-        <url-pattern>/bookingdetails/AddBooking</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>EditBooking</servlet-name>
-        <url-pattern>/bookingdetails/EditBooking/*</url-pattern>
-    </servlet-mapping>
+        <!-- Travel Package -->
+    <servlet>
+        <servlet-name>Travel Packages</servlet-name>
+        <jsp-file>/package/TravelPackages.jsp</jsp-file>
+    </servlet>
 
+    <servlet>
+        <servlet-name>Add Travel Package</servlet-name>
+        <jsp-file>/package/AddTravelPackage.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Edit Travel Package</servlet-name>
+        <jsp-file>/package/EditTravelPackage.jsp</jsp-file>
+    </servlet>
+  
+      <!-- Customer -->
     <servlet>
         <servlet-name>Customer</servlet-name>
         <jsp-file>/customer/AllCustomers.jsp</jsp-file>
@@ -66,6 +62,52 @@
         <jsp-file>/customer/EditCustomer.jsp</jsp-file>
     </servlet>
 
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>Agent</servlet-name>
+        <url-pattern>/agent/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddAgent</servlet-name>
+        <url-pattern>/agent/AddAgent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditAgent</servlet-name>
+        <url-pattern>/agent/EditAgent/*</url-pattern>
+    </servlet-mapping>
+
+        <!-- Travel Packages -->
+    <servlet-mapping>
+        <servlet-name>Travel Packages</servlet-name>
+        <url-pattern>/travel-package</url-pattern>
+        <url-pattern>/travel-package/</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Add Travel Package</servlet-name>
+        <url-pattern>/travel-package/add-a-travel-package</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Edit Travel Package</servlet-name>
+        <url-pattern>/travel-package/edit-travel-package/*</url-pattern>
+    </servlet-mapping>
+
+      <!-- Booking -->
+    <servlet-mapping>
+        <servlet-name>Booking</servlet-name>
+        <url-pattern>/bookingdetails/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddBooking</servlet-name>
+        <url-pattern>/bookingdetails/AddBooking</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditBooking</servlet-name>
+        <url-pattern>/bookingdetails/EditBooking/*</url-pattern>
+    </servlet-mapping>
+
+      <!-- Customer -->
     <servlet-mapping>
         <servlet-name>Customer</servlet-name>
         <url-pattern>/customer/</url-pattern>
@@ -78,8 +120,4 @@
         <servlet-name>EditCustomer</servlet-name>
         <url-pattern>/customer/EditCustomer/*</url-pattern>
     </servlet-mapping>
-
-
-
-
 </web-app>
