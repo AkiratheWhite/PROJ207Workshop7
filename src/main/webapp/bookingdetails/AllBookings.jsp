@@ -37,6 +37,7 @@
             <th scope="col">Class Id</th>
             <th scope="col">Fee Id</th>
             <th scope="col">Product Supplier Id</th>
+            <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody>

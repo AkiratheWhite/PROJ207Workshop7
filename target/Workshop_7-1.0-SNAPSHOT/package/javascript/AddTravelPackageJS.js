@@ -29,23 +29,17 @@ function AddTravelPackage() {
     $.each(formData, function (index){
         if(formData[index]["name"] === "PkgStartDate" ||
             formData[index]["name"] === "PkgEndDate"){
-            // Empty dateValue
-            let dateValue = "";
-
             // Try to Parse the Date Value
-            dateValue = new Date(formData[index]["value"]);
-
-            // Format to be passed in the Travel Experts Database
-            dateValue = new Date(dateValue);
+            let dateValue = new Date(formData[index]["value"]);
 
             // Print unformatted dateValue
-            console.log("[UNFORMATTED]: " + dateValue)
+            //console.log("[UNFORMATTED]: " + dateValue)
 
             // Convert dateValue to ISOString
             dateValue = (dateValue.toISOString());
 
             // Print
-            console.log("[FORMATTED]: " + dateValue)
+            //console.log("[FORMATTED]: " + dateValue)
 
             // Put Value in the Object
             formObject[formData[index]["name"]] = dateValue;

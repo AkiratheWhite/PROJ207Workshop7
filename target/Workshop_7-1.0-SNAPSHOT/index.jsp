@@ -9,17 +9,32 @@
 <html>
 <head>
     <title>Travel Experts Web API</title>
+    <%@include file="partials/boostrap_jquery.jsp"%>
 </head>
 <body>
     <h1>This is the Travel Experts Web API</h1>
-
-    <h2>How to use</h2>
-        <p>To access a resource, use the following URI template: http://localhost:8080/Workshop_7_war_exploded/api/{resource}</p>
-        <p>If you do not specify a resource path, the default test resource will send a plain-text response back.</p>
-    <h2>Agents</h2>
-        <p>To add a new agent, use the form under http://localhost:8080/Workshop_7_war_exploded/agent/AddAgent</p>
-    <h2>Customers</h2>
-        <p>To add a new customer, use the form under http://localhost:8080/Workshop_7_war_exploded/customer/AddCustomer</p>
+<hr>
+    &nbsp;&nbsp;&nbsp;<a href="bookingdetails/AllBookings.jsp">
+        <button class="btn btn-secondary">Booking Details</button>
+    </a>
+    <br/>
+    <br/>
+    <br/>
+    &nbsp;&nbsp;&nbsp;<a href="agent/AllAgents.jsp">
+        <button class="btn btn-secondary">Agents</button>
+    </a>
+    <br/>
+    <br/>
+    <br/>
+    &nbsp;&nbsp;&nbsp;<a href="customer/AllCustomers.jsp">
+        <button class="btn btn-secondary">Customes</button>
+    </a>
+    <br/>
+    <br/>
+    <br/>
+    &nbsp;&nbsp;&nbsp;<a href="package/TravelPackages.jsp">
+        <button class="btn btn-secondary">Packages</button>
+    </a>
 
 </body>
 </html>
