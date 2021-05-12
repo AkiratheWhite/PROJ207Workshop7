@@ -17,9 +17,20 @@
         <jsp-file>/agent/EditAgent.jsp</jsp-file>
     </servlet>
 
+        <!-- Travel Packages -->
     <servlet>
         <servlet-name>Travel Packages</servlet-name>
-        <jsp-file>/package.jsp</jsp-file>
+        <jsp-file>/package/TravelPackages.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Add Travel Package</servlet-name>
+        <jsp-file>/package/AddTravelPackage.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Edit Travel Package</servlet-name>
+        <jsp-file>/package/EditTravelPackage.jsp</jsp-file>
     </servlet>
 
     <!-- Servlet Mapping -->
@@ -36,8 +47,20 @@
         <url-pattern>/agent/EditAgent/*</url-pattern>
     </servlet-mapping>
 
+        <!-- Travel Packages -->
     <servlet-mapping>
         <servlet-name>Travel Packages</servlet-name>
-        <url-pattern>/travel-packages</url-pattern>
+        <url-pattern>/travel-package</url-pattern>
+        <url-pattern>/travel-package/</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Add Travel Package</servlet-name>
+        <url-pattern>/travel-package/add-a-travel-package</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Edit Travel Package</servlet-name>
+        <url-pattern>/travel-package/edit-travel-package/*</url-pattern>
     </servlet-mapping>
 </web-app>
