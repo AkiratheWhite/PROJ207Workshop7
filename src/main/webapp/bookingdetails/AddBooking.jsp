@@ -1,28 +1,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Add New Agent</title>
-    <%@include file="../partials/bootsrap_jquery.jsp"%>
+    <title>Add New Booking Details</title>
+    <%@include file="../partials/boostrap_jquery.jsp"%>
 </head>
 <body>
 
 <div class="container py-4">
-    <h2 class="text-center">Add New Agent</h2>
-    <%@include file="./components/AgentForm.jsp"%>
+    <h2 class="text-center">Add New Booking Detail</h2>
+    <%@include file="./components/BookingForm.jsp"%>
     <div class="d-flex justify-content-center">
-        <a href="${pageContext.request.contextPath}/agent/">
+        <a href="${pageContext.request.contextPath}/bookingdetails/">
             <button class="btn btn-secondary">Back to List</button>
         </a>
     </div>
 </div>
 
 <script>
-    function HandleSubmit(event) {
+    function HandleSubmitBookings(event) {
         event.preventDefault();
         $("#btnSubmit").attr("disabled", "");
         $("#btnSubmit").removeAttr("type");
 
-        const formData = $("#AgentForm").serializeArray();
+        const formData = $("#BookingDetailForm").serializeArray();
 
         var formObject = {};
 
@@ -34,13 +34,13 @@
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080/Workshop_7_war_exploded/api/agent",
+            url: "http://localhost:8080/Workshop_7_war_exploded/api/booking",
             data: formJSON,
             dataType: "text",
             contentType: "application/json",
             beforeSend: function() { $("#statusMessage").html("Awaiting response...")},
             success: function(data) { $("#statusMessage").html(data);
-                window.location.replace("${pageContext.request.contextPath}/agent/");
+                window.location.replace("${pageContext.request.contextPath}/bookingdetails/");
             },
             error: function(data) { $("#statusMessage").html(data);}
         });
@@ -48,3 +48,4 @@
 </script>
 </body>
 </html>
+

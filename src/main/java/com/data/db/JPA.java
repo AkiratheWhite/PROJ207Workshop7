@@ -82,7 +82,7 @@ public class JPA {
     }
 
     /**
-     * Nethod to update a record from a table.
+     * Method to update a record from a table.
      * @param updateEntity The object containing information of the new record to be added to the database. Must be a JPA entity.
      * @return True if update is successful, false if update failed.
      */
