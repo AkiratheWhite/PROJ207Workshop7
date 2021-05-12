@@ -1,44 +1,46 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Tony
-  Date: 2021-05-09
-  Time: 2:23 p.m.
+  User: Chester
+  Date: 5/10/2021
+  Time: 9:32 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>All Agents</title>
+    <title>Customers</title>
     <%@include file="../partials/bootsrap_jquery.jsp"%>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/agent/js/AllAgents.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/customer/js/AllCustomers.js"></script>
 </head>
 <body>
     <div class="container py-4">
         <div class="d-flex justify-content-around">
-            <h2>All Agents</h2>
-            <a href="${pageContext.request.contextPath}/agent/AddAgent">
-                <button class="btn btn-primary">Add New Agent</button>
+            <h2>Customers</h2>
+            <a href="${pageContext.request.contextPath}/customer/AddCustomer">
+                <button class="btn btn-primary">Add Customer</button>
             </a>
         </div>
 
-        <table id="AgentTable" class="table text-center">
+        <table  id="CustomerTable" class="table text-center">
             <thead class="table-dark">
                 <tr>
-                    <th scope="col">Agent ID</th>
+                    <th scope="col">Customer ID</th>
                     <th scope="col">First Name</th>
-                    <th scope="col">Middle Initial</th>
                     <th scope="col">Last Name</th>
-                    <th scope="col">Business Phone No.</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Province</th>
+                    <th scope="col">Postal</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Home Phone</th>
+                    <th scope="col">Business Phone</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Agency ID</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Agent ID</th>
                 </tr>
             </thead>
             <tbody>
             </tbody>
         </table>
-
         <div id="loadingSpinner" class="d-flex justify-content-center">
             <div class="spinner-grow spinner-grow-sm mx-1" role="status">
                 <span class="visually-hidden">Loading...</span>
@@ -55,7 +57,7 @@
 </body>
     <script>
         $(document).ready(() => {
-            createAgentList();
-        });
+            createCustomerList();
+        })
     </script>
 </html>

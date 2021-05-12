@@ -18,5 +18,8 @@
         <p>If you do not specify a resource path, the default test resource will send a plain-text response back.</p>
     <h2>Agents</h2>
         <p>To add a new agent, use the form under http://localhost:8080/Workshop_7_war_exploded/agent/AddAgent</p>
+    <h2>Customers</h2>
+        <p>To add a new customer, use the form under http://localhost:8080/Workshop_7_war_exploded/customer/AddCustomer</p>
+
 </body>
 </html>

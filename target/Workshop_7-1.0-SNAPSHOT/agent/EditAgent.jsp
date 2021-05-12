@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Edit Agent</title>
-    <%@include file="../partials/boostrap_jquery.jsp"%>
+    <%@include file="../partials/bootsrap_jquery.jsp"%>
 </head>
 <body>
 

@@ -20,7 +20,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="default" value="38907b94-aecf-497f-a7dc-92192a3c594b" />
+          <factory-entry name="default" value="a2b01586-d6d6-4dd2-b709-5775f2d911bf" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
@@ -44,7 +44,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.23" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.11.4" level="project" />
-    <orderEntry type="library" name="Maven: org.mariadb.jdbc:mariadb-java-client:2.7.2" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.4.29.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" level="project" />
@@ -102,5 +101,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.7.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.mariadb.jdbc:mariadb-java-client:2.7.2" level="project" />
   </component>
 </module>

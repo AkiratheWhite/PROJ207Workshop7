@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>All Agents</title>
-    <%@include file="../partials/boostrap_jquery.jsp"%>
+    <%@include file="../partials/bootsrap_jquery.jsp"%>
     <script type="text/javascript" src="${pageContext.request.contextPath}/agent/js/AllAgents.js"></script>
 </head>
 <body>

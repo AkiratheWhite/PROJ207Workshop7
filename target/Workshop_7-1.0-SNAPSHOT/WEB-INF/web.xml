@@ -52,4 +52,34 @@
         <servlet-name>EditBooking</servlet-name>
         <url-pattern>/bookingdetails/EditBooking/*</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Customer</servlet-name>
+        <jsp-file>/customer/AllCustomers.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>AddCustomer</servlet-name>
+        <jsp-file>/customer/AddCustomer.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>EditCustomer</servlet-name>
+        <jsp-file>/customer/EditCustomer.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Customer</servlet-name>
+        <url-pattern>/customer/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddCustomer</servlet-name>
+        <url-pattern>/customer/AddCustomer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditCustomer</servlet-name>
+        <url-pattern>/customer/EditCustomer/*</url-pattern>
+    </servlet-mapping>
+
+
+
+
 </web-app>
