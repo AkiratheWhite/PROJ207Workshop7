@@ -61,13 +61,6 @@ public class CustomerResource {
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Request failed.").build();
         }
 
-        /*newCustomer.setCustomerId(0); //Primary key must be manually entered. Using 0 to auto-increment.
-
-        if (JPA.AddOne(newCustomer)) {
-            return Response.status(Response.Status.CREATED).entity("Request processed.").build();
-        } else {
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("Request failed.").build();
-        }*/
     }//...AddCustomer
 
     //URI: [domain]/api/customer/{id}

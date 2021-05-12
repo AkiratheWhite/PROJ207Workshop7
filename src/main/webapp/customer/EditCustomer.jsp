@@ -37,10 +37,12 @@
             customerId = data['CustomerId']
             const values = Object.keys(data)
             for(let i=0; i<values.length; i++) {
+
                 //console.log("Values "+ values[i] + " - " +data[values[i]])
                 //console.log($("input[name="+values[i]+"]"));
-                //$("#"+values[i]).val(data[values[i]])
-                $("input[name="+values[i]+"]").val(data[values[i]])
+
+                //$("#"+values[i]).val(data[values[i]])//retrieve data by Id value
+                $("input[name="+values[i]+"]").val(data[values[i]])//retrieve data by name value
             }
         });
     });
