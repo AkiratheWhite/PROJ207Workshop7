@@ -33,8 +33,6 @@ function createTravelPackagesList() {
             // Print the total data received on the Browser Console
             console.log("Package/s Length: " + packages.length)
 
-
-
             // For Loop to Populate Table List
             $.each(packages, function () {
                 /**
@@ -57,13 +55,11 @@ function createTravelPackagesList() {
                     $("<td>").append($("<a/>")
                         .prop('href', "/Workshop_7_war_exploded/travel-package/edit-travel-package/" + this.PackageId)
                         .append($("<button/>")
-                            .button(true)
                             .prop('id', "Package" + this.PackageId)
                             .prop('class', "btn btn-primary mx-1 btnEdit")
                             .text("Edit")
                             .val(this.PackageId))),
                     $("<td>").append($("<button/>")
-                        .button(true)
                         .prop("id", "Package" + this.PackageId)
                         .prop('class', "btn btn-danger mx-1 btnDelete")
                         .text("Delete")
@@ -127,6 +123,7 @@ function deletePackage(packageId){
                 // Alerts the user of the result of the DELETE request, and refreshes the table list.
                 alert(data);
                 createTravelPackagesList();
+                window.location.replace("/Workshop_7_war_exploded/travel-package");
             },
 
             error: function (){
