@@ -111,7 +111,7 @@ function EditTravelPackage() {
 
     /**
      *
-     * Post Method to update Travel Package
+     * Put Method to update Travel Package
      *
      */
     $.ajax({
@@ -124,8 +124,8 @@ function EditTravelPackage() {
         beforeSend: function() { $("#statusMessage").html("Awaiting response...")},
 
         success: function(data) { $("#statusMessage").html(data);
-            window.location.replace("/Workshop_7_war_exploded/travel-package");
-
+            window.location.replace("http://localhost:8080/Workshop_7_war_exploded/travel-package");
+            
             // Clear Cookie
             document.cookie = "PackageID= ; path=/"
         },
