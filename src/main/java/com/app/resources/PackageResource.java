@@ -3,6 +3,7 @@ package com.app.resources;
 import com.data.db.JPA;
 import com.data.model.PackagesEntity;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -35,7 +36,7 @@ public class PackageResource {
             // Instantiate "result" to a GSON Object
             // Serialize the result to JSON
             // Assign the JSON Object to a String value
-            String result = new Gson().toJson(resultList);
+            String result = new GsonBuilder().setDateFormat("yyyy-MM-dd hh:mm:ss.S").create().toJson(resultList);
 
             // Print Result
             System.out.println("[RESULT - getAllPackages] " + result);
@@ -65,7 +66,10 @@ public class PackageResource {
 
         try {
             // Put the result in a String
-            String result = new Gson().toJson(JPA.GetOne(PackagesEntity.class, packageId));
+            String result = new GsonBuilder()
+                    .setDateFormat("yyyy-MM-dd hh:mm:ss.S")
+                    .create()
+                    .toJson(JPA.GetOne(PackagesEntity.class, packageId));
 
             // Print Result
             System.out.println("[RESULT - getPackage] " + result);
@@ -96,7 +100,10 @@ public class PackageResource {
 
         try {
             // Construct GSON object, deserialize, and put it on a Package Entity Object
-            PackagesEntity new_Package = new Gson().fromJson(body, PackagesEntity.class);
+            PackagesEntity new_Package = new GsonBuilder()
+                    .setDateFormat("yyyy-MM-dd hh:mm:ss.S")
+                    .create()
+                    .fromJson(body, PackagesEntity.class);
 
             // If Statements to process the Response
             if (JPA.AddOne(new_Package)) {
@@ -131,7 +138,10 @@ public class PackageResource {
 
         try {
             // Construct GSON object, deserialize, and put it on a Package Entity Object
-            packagesEntity = new Gson().fromJson(body, PackagesEntity.class);
+            packagesEntity = new GsonBuilder()
+                    .setDateFormat("yyyy-MM-dd hh:mm:ss.S")
+                    .create()
+                    .fromJson(body, PackagesEntity.class);
 
             // If statements to Return Responses
             // - Also updates the Package Table
