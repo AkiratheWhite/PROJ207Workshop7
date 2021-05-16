@@ -7,6 +7,10 @@ import com.google.gson.Gson;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
+/**
+ * Code written by: Chester Solang
+ * Last modified on:
+ */
 
 @Path("/customer")
 public class CustomerResource {
