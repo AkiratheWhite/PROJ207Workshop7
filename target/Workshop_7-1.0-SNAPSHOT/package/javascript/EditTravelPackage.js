@@ -1,5 +1,12 @@
+/**
+ *
+ * Coded by: Texin Otinguey
+ *
+ */
+
 // Declare globally scoped variable to store PackageId from cookie.
 let packageId = getCookie("PackageID");
+
 
 /**
  *
