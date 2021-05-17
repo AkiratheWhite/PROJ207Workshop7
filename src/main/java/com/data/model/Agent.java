@@ -5,6 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Code written by: Tony (Zongzheng) Li
+ * Last modified on (DD/MM/YY): 05/14/21
+ */
+
 @Entity
 @Table(name="agents")
 public class Agent {

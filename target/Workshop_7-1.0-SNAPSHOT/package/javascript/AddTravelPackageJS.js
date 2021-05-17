@@ -70,7 +70,7 @@ function AddTravelPackage() {
         beforeSend: function() { $("#statusMessage").html("Awaiting response...")},
 
         success: function(data) { $("#statusMessage").html(data);
-            window.location = ("/Workshop_7_war/travel-package/");
+            window.location.replace("/Workshop_7_war_exploded/travel-package");
         },
 
         error: function(data) { $("#statusMessage").html(data);}
