@@ -3,7 +3,10 @@ package com.data.model;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-
+/**
+ * Code written by: dhaval shah
+ * Last modified on (DD/MM/YY): 05/14/21
+ */
 @Entity
 @Table(name="bookingdetails")
 public class Bookingdetails {
