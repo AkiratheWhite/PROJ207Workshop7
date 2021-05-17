@@ -47,9 +47,28 @@
                 </ul>
             </div>
         </div>
-
-
-
+    <table id="BookingTable" class="table text-center">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">Booking Detail ID</th>
+            <th scope="col">Itinerary Number</th>
+            <th scope="col">Trip Start Date</th>
+            <th scope="col">Trip End Date</th>
+            <th scope="col">Description</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Base Price</th>
+            <th scope="col">Agency Commission</th>
+            <th scope="col">Booking Id</th>
+            <th scope="col">Region Id</th>
+            <th scope="col">Class Id</th>
+            <th scope="col">Fee Id</th>
+            <th scope="col">Product Supplier Id</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
         <div class="col-sm p-3 min-vh-100">
             <div class="card mb-4">
                 <div class="card-header">

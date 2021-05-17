@@ -48,7 +48,6 @@
                     </ul>
                 </div>
             </nav>
-
             <div class="col-sm p-3 min-vh-100" id="content">
                 <header id="indexHeader">
 
