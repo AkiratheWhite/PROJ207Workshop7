@@ -1,4 +1,9 @@
 /**
+ * Code written by: Tony (Zongzheng) Li
+ * Last modified on (DD/MM/YY): 05/14/21
+ */
+
+/**
  * Method to make a GET request to the API resource and populate the table.
  */
 const createAgentList = () => {
